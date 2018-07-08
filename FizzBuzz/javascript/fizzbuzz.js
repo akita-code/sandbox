@@ -1,6 +1,6 @@
 var APP = APP || {};
 
-APP.arr = Array.apply(null, new Array(100)).map((v, i) => i);
+APP.arr = Array.apply(null, new Array(100)).map((v, i) => i+1);
 
 APP.fizzbuzz = i => {
     if (i % 15 === 0) {
@@ -10,7 +10,7 @@ APP.fizzbuzz = i => {
     } else if (i % 5 === 0) {
         console.log("Buzz");
     } else {
-        console.log("");
+        console.log(i);
     }
 }
 
