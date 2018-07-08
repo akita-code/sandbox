@@ -12,6 +12,6 @@ fizzbuzz = (i) => {
     }
 }
 
-for (var i in arr) {
+for (var i of arr) {
     fizzbuzz(i);
 }
