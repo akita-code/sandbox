@@ -1,4 +1,4 @@
-for i in range(1, 100):
+def fizzbuzz(i):
     if i % 15 == 0:
         print("FizzBuzz!")
     elif i % 3 == 0:
@@ -7,3 +7,5 @@ for i in range(1, 100):
         print("Buzz")
     else:
         print("")
+
+[ fizzbuzz(i) for i in range(1, 100) ]
