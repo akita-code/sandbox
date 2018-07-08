@@ -7,8 +7,4 @@ fx =-> (i) {
   end
 }
 
-num_arr = 1.upto(100).to_a
-
-num_arr.each do |i|
-  puts fx.(i)
-end
+1.upto(100).map{|s| puts fx.(s)}
