@@ -1,4 +1,4 @@
-100.times { |i|
+1.upto(100) { |i|
   puts case
   when i % 15 == 0 then "FizzBuzz!"
   when i % 3 == 0 then "Fizz"
