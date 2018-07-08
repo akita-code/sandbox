@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.stream.*;
 import java.util.function.*;
 
@@ -16,6 +15,6 @@ public class FizzBuzz {
             }
         };
 
-        java.util.stream.IntStream.rangeClosed(1, 100).forEach(c);
+        IntStream.rangeClosed(1, 100).forEach(c);
     }
 }
