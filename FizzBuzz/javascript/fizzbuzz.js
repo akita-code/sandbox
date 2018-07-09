@@ -4,20 +4,14 @@ APP.arr = Array.apply(null, new Array(100)).map((v, i) => i+1);
 
 APP.fizzbuzz = i => {
     if (i % 15 === 0) {
-        console.log("FizzBuzz!");
+        return "FizzBuzz!";
     } else if (i % 3 === 0) {
-        console.log("Fizz");
+        return "Fizz";
     } else if (i % 5 === 0) {
-        console.log("Buzz");
+        return "Buzz";
     } else {
-        console.log(i);
+        return i.toString(10);
     }
 }
 
-APP.loop = () => {
-    for (var i of APP.arr) {
-        APP.fizzbuzz(i);
-    }
-}
-
-APP.loop();
+APP.arr.map(APP.fizzbuzz).forEach(console.log);

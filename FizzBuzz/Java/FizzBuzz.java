@@ -3,18 +3,21 @@ import java.util.function.*;
 
 public class FizzBuzz {
     public static void main(String[] args) {
-        IntConsumer c = (x) -> {
+        IntFunction<String> c = (x) -> {
             if (x % 15 == 0) {
-                System.out.println("FizzBuzz!");
+                return "FizzBuzz!";
             } else if (x % 3 == 0) {
-                System.out.println("Fizz");
+                return "Fizz";
             } else if (x % 5 == 0) {
-                System.out.println("Buzz");
+                return "Buzz";
             } else {
-                System.out.println(x);
+                return String.valueOf(x);
             }
         };
 
-        IntStream.rangeClosed(1, 100).forEach(c);
+        IntStream
+            .rangeClosed(1, 100)
+            .mapToObj(c)
+            .forEach(System.out::println);
     }
 }
