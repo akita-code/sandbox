@@ -1,34 +1,8 @@
-def q5(list)
-    sign_list = [0, 0, 0, 0, 0, 0, 0, 0]
-
-    loop do
-        break if sign_list.min == 2 
-
-        sign_list.each_with_index do |sign, i|
-            case sign
-            when 0..1 then sign_list[i] += 1; break
-            else sign_list[i] = 0
-            end
-        end
-
-        formula = ""
-        list.each_with_index do |num, i|
-           formula << num.to_s
-
-           break if sign_list.size <= i
-
-           formula << case sign_list[i]
-           when 0 then "+"
-           when 1 then "-"
-           else ""
-           end
-        end
-
-        if eval(formula) == 100
-            puts formula + "=100"
-        end
-    end
+def q5(l)
+    (3**(l.size-1)-1).times.map do |i|
+        l.zip(i.to_s(3).rjust(l.size-1, "0").chars.map{|s|
+            s=="0" ? "+" : s=="1" ? "-" : ""
+        }).join
+    end.each{|f| puts f + "=100" if eval(f) == 100}
 end
-
-list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-q5(list)
+q5(("1".."9").to_a)
