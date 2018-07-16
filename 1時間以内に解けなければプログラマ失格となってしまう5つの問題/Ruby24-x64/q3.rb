@@ -1,2 +1,1 @@
-x = 1
-100.times.reduce(0){|n, m| p n; y = n + x; n = x; x = y; n}
+100.times.reduce([0, 1]){|x, y| p x.last ;x << x[x.size-2] + x[x.size-1]; x}
