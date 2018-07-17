@@ -1,5 +1,5 @@
 # 配列の添え字
-PRICE, WAIT = 0, 1
+NAME, PRICE, WAIT = 0, 1, 2
 
 # 標準入力からの取得項目の初期化
 init =-> () {
