@@ -1,0 +1,20 @@
+@startuml TemplateMethod
+abstract class AbstractDisplay {
+    {abstract} +open()
+    {abstract} +print()
+    {abstract} +close()
+    +display()
+}
+
+class CharDisplay extends AbstractDisplay {
+    +open()
+    +print()
+    +close()
+}
+class StringDisplay extends AbstractDisplay {
+    +open()
+    +print()
+    +close()
+    -printLine()
+}
+@enduml

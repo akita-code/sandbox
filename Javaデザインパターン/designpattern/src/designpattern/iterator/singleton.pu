@@ -1,0 +1,34 @@
+@startuml singleton
+interface Aggregator {
+    {abstract} +Iterator()
+}
+interface Iterator {
+    {abstract} +hasNext()
+    {abstract} +next()
+}
+class BookShelf implements Aggregator {
+    -books
+    -last
+
+    +getBookAt()
+    +appendBook()
+    +getLength()
+    +iterator()
+}
+class BookShelfIterator implements Iterator {
+    -bookShelf
+    -index
+
+    +hasNext()
+    +next()
+}
+class Book {
+    -name
+
+    +getName()
+}
+
+Aggregator --> Iterator : Creates >
+BookShelf <--o BookShelfIterator
+Book <--o BookShelf
+@enduml

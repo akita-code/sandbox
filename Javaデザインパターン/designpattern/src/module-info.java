@@ -1,0 +1,6 @@
+/**
+ * @author akita
+ *
+ */
+module designpattern {
+}
