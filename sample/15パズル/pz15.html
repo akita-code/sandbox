@@ -73,13 +73,13 @@
                 var element = numArr[--len];
                 numArr[len] = numArr[i];
                 numArr[i] = element;
-            };
+            }
             numArr.push(SPACE);
 
             for (var j in arr) {
                 arr[j].innerText = numArr[j]
-            };
-        };
+            }
+        }
 
         shuffle(arr);
 
@@ -87,9 +87,9 @@
             for (var i in arr) {
                 if (arr[i].innerText===SPACE) {
                     arr[i].innerText = text;
-                };
-            };
-        };
+                }
+            }
+        }
 
         return {
             SPACE: SPACE,
@@ -103,7 +103,7 @@
         if (pz.arr[i+1].innerText===pz.SPACE || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[1].addEventListener('click', function(e){
         var i = 1;
@@ -111,7 +111,7 @@
                 || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[2].addEventListener('click', function(e){
         var i = 2;
@@ -119,14 +119,14 @@
                 || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[3].addEventListener('click', function(e){
         var i = 3;
         if (pz.arr[i-1].innerText===pz.SPACE || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[4].addEventListener('click', function(e){
         var i = 4;
@@ -134,7 +134,7 @@
                 || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[5].addEventListener('click', function(e){
         var i = 5;
@@ -142,7 +142,7 @@
                 || pz.arr[i+1].innerText===pz.SPACE || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[6].addEventListener('click', function(e){
         var i = 6;
@@ -150,7 +150,7 @@
                 || pz.arr[i+1].innerText===pz.SPACE || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[7].addEventListener('click', function(e){
         var i = 7;
@@ -158,7 +158,7 @@
                 || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[8].addEventListener('click', function(e){
         var i = 8;
@@ -166,7 +166,7 @@
                 || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[9].addEventListener('click', function(e){
         var i = 9;
@@ -174,7 +174,7 @@
                 || pz.arr[i+1].innerText===pz.SPACE || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[10].addEventListener('click', function(e){
         var i = 10;
@@ -182,7 +182,7 @@
                 || pz.arr[i+1].innerText===pz.SPACE || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[11].addEventListener('click', function(e){
         var i = 11;
@@ -190,14 +190,14 @@
                 || pz.arr[i+4].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[12].addEventListener('click', function(e){
         var i = 12;
         if (pz.arr[i-4].innerText===pz.SPACE || pz.arr[i+1].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[13].addEventListener('click', function(e){
         var i = 13;
@@ -205,7 +205,7 @@
                 || pz.arr[i+1].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[14].addEventListener('click', function(e){
         var i = 14;
@@ -213,14 +213,14 @@
                 || pz.arr[i+1].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
     pz.arr[15].addEventListener('click', function(e){
         var i = 15;
         if (pz.arr[i-4].innerText===pz.SPACE || pz.arr[i-1].innerText===pz.SPACE) {
             pz.move(pz.arr, this.innerText);
             this.innerText = pz.SPACE;
-        };
+        }
     }, false);
 </script> 
 </body>

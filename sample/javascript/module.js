@@ -1,9 +1,11 @@
-// モジュールパターン
+// 名前空間の作成
 var module = module || {
     util : {},
 };
 
-module.util = function() {
+// 即時関数を利用したモジュールパターン
+module.util = (function() {
+    // private
     var x = "abc";
     var y = "def";
 
@@ -17,19 +19,18 @@ module.util = function() {
        console.log(y); 
     };
 
-    sety = (x) => {
-        y = x;
-    };
-
+    // public
+    // 以下のオブジェクトにて返却されたもののみ
+    // 外部からアクセス可能となる
     return {
         y: y,
         z: "ghi",
         fx: fx,
         fx2: fx2, 
         fx3: fx3,
-        sety: sety,
+        sety: x => {y = x;},
     };
-}();
+}());
 
 module.util.fx("123");
 module.util.fx2();
