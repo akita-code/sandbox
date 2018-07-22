@@ -1,0 +1,35 @@
+@startuml Builder
+
+hide footbox
+participant "Client" as C
+participant "Director" as D
+participant "ConcreteBuilder" as CB
+
+activate C
+Create CB
+C -> CB : new
+
+C -> D : construct
+activate D
+D -> CB : buildpart1
+activate CB
+D <-- CB 
+deactivate CB
+D -> CB : buildpart2
+activate CB
+D <-- CB 
+deactivate CB
+D -> CB : buildpart3
+activate CB
+D <-- CB 
+deactivate CB
+C <-- D
+deactivate D
+C -> CB : getResult
+activate CB
+C <-- CB
+deactivate CB
+
+deactivate C
+
+@enduml
